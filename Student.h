@@ -12,6 +12,9 @@ class Student {
     Date dateOfBirth;
 
   public:
+    Student() {
+      
+    }
     Student(int id, string fullName, string homeTown, Date dob);
 
     void print();
