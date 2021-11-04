@@ -8,7 +8,7 @@ using namespace std;
 class Student
 {
 private:
-  int id;
+  string id;
   string fullName, homeTown;
   Date dateOfBirth;
 
@@ -16,7 +16,7 @@ public:
   Student()
   {
   }
-  Student(int id, string fullName, string homeTown, Date dob);
+  Student(string id, string fullName, string homeTown, Date dob);
 
   void print();
 };

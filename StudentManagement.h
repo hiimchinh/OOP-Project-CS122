@@ -8,7 +8,7 @@ using namespace std;
 class StudentManagement
 {
 private:
-  int n;
+  int n = 0;
   Student students[500];
 
 public:

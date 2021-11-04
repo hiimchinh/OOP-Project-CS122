@@ -2,7 +2,7 @@
 #include "Student.h"
 using namespace std;
 
-Student::Student(int id, string fullName, string homeTown, Date dob)
+Student::Student(string id, string fullName, string homeTown, Date dob)
 {
   this->id = id;
   this->fullName = fullName;
@@ -12,9 +12,9 @@ Student::Student(int id, string fullName, string homeTown, Date dob)
 
 void Student::print()
 {
-  cout << "ID: " << id << endl;
-  cout << "Full name: " << fullName << endl;
-  cout << "Home town: " << homeTown << endl;
-  cout << "Date of birth: ";
+  cout << "Mã sinh viên: " << id << endl;
+  cout << "Họ tên: " << fullName << endl;
+  cout << "Quê quán: " << homeTown << endl;
+  cout << "Ngày sinh: ";
   dateOfBirth.print();
 }
