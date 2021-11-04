@@ -108,13 +108,38 @@ void StudentManagement::updateStudent()
     cin >> date >> month >> year;
     Date dob(date, month, year);
     students[pos] = Student(id, fullName, homeTown, dob);
-    cout << "Cập nhật thông tin sinh viên thành công.";
+    cout << "Cập nhật thông tin sinh viên thành công.\n";
   } else
   {
-    cout << "Không tìm thấy sinh viên có mã sinh viên " << id;
+    cout << "Không tìm thấy sinh viên có mã sinh viên " << id << endl;
   }
 }
 
 void StudentManagement::deleteStudent()
 {
+  cout << "Nhập mã sinh viên bạn muốn xóa: ";
+  string id;
+  cin >> id;
+  int pos = -1;
+  for (int i = 0; i < n; i++)
+  {
+    if (students[i].getId() == id)
+    {
+      pos = i;
+      break;
+    }
+  }
+  if (pos != -1)
+  {
+    for (int j = pos; j < n; j++)
+    {
+      students[j] = students[j + 1];
+    }
+    n--;
+    cout << "Xóa sinh viên thành công!\n";
+  } else
+  {
+    cout << "Không tìm thấy sinh viên có mã sinh viên: " << id << endl;
+  }
+  
 }

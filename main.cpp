@@ -27,9 +27,11 @@ int main()
       break;
     case 3:
       qlsv.updateStudent();
+      qlsv.saveFile();
       break;
     case 4:
       qlsv.deleteStudent();
+      qlsv.saveFile();
       break;
     case 5:
       break;
