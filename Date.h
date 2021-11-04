@@ -4,22 +4,26 @@
 #include <iostream>
 using namespace std;
 
-class Date {
-  private:
-    int day, month, year;
-  public:
-    Date() {
+class Date
+{
+private:
+  int day, month, year;
 
-    }
-    Date(int d, int m, int y) {
-      day = d;
-      month = m;
-      year = y;
-    }
+public:
+  Date()
+  {
+  }
+  Date(int d, int m, int y)
+  {
+    day = d;
+    month = m;
+    year = y;
+  }
 
-    void print() {
-      cout << day << '/' << month << '/' << year << endl;
-    }
+  void print()
+  {
+    cout << day << '/' << month << '/' << year << endl;
+  }
 };
 
 #endif

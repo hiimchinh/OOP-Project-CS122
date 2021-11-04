@@ -5,19 +5,20 @@
 #include "Date.h"
 using namespace std;
 
-class Student {
-  private:
-    int id;
-    string fullName, homeTown;
-    Date dateOfBirth;
+class Student
+{
+private:
+  int id;
+  string fullName, homeTown;
+  Date dateOfBirth;
 
-  public:
-    Student() {
-      
-    }
-    Student(int id, string fullName, string homeTown, Date dob);
+public:
+  Student()
+  {
+  }
+  Student(int id, string fullName, string homeTown, Date dob);
 
-    void print();
+  void print();
 };
 
 #endif

@@ -3,7 +3,8 @@
 #include "Student.h"
 using namespace std;
 
-void StudentManagement::printMenu() {
+void StudentManagement::printMenu()
+{
   cout << "Chương trình quản lý sinh viên\n";
   cout << "1. Hiển thị danh sách sinh viên\n";
   cout << "2. Thêm sinh viên\n";
@@ -14,30 +15,32 @@ void StudentManagement::printMenu() {
   cout << "Mời chọn chức năng: ";
   int option;
   cin >> option;
-  switch (option) {
-    case 1:
-      printStudents();
-      break;
-    case 2:
-      break;
-    case 3:
-      break;
-    case 4:
-      break;
-    case 5:
-      break;
-    case 6:
-      break;
-    default:
-      
-      break;
+  switch (option)
+  {
+  case 1:
+    printStudents();
+    break;
+  case 2:
+    break;
+  case 3:
+    break;
+  case 4:
+    break;
+  case 5:
+    break;
+  case 6:
+    break;
+  default:
+
+    break;
   }
 }
 
-void StudentManagement::printStudents() {
+void StudentManagement::printStudents()
+{
   cout << "here";
 }
 
-void StudentManagement::addStudent() {
-
+void StudentManagement::addStudent()
+{
 }
