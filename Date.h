@@ -24,6 +24,9 @@ public:
   {
     cout << day << '/' << month << '/' << year << endl;
   }
+  int getDate() { return day; }
+  int getMonth() { return month; }
+  int getYear() { return year; }
 };
 
 #endif

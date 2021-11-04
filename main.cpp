@@ -21,6 +21,7 @@ int main()
       break;
     case 2:
       qlsv.addStudent();
+      qlsv.saveFile();
       break;
     case 3:
       break;

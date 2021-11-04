@@ -19,6 +19,10 @@ public:
   Student(string id, string fullName, string homeTown, Date dob);
 
   void print();
+  string getId() { return id; }
+  string getFullName() { return fullName; }
+  string getHomeTown() { return homeTown; }
+  Date getDob() { return dateOfBirth; }
 };
 
 #endif

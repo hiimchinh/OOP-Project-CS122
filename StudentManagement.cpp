@@ -1,6 +1,7 @@
 #include <iostream>
 #include "StudentManagement.h"
 #include "Student.h"
+#include <fstream>
 using namespace std;
 
 void StudentManagement::printMenu()
@@ -40,4 +41,27 @@ void StudentManagement::addStudent()
   Student student(id, fullName, homeTown, dob);
   students[n] = student;
   n++;
+}
+
+void StudentManagement::loadFile()
+{
+
+}
+
+void StudentManagement::saveFile()
+{
+  fstream file("data.txt", ios::out);
+  file << n << endl;
+  for (int i = 0; i < n; i++)
+  {
+    Student currentStudent = students[i];
+    file << currentStudent.getId() << endl;
+    file << currentStudent.getFullName() << endl;
+    file << currentStudent.getHomeTown() << endl;
+    Date dob = currentStudent.getDob();
+    file << dob.getDate() << endl;
+    file << dob.getMonth() << endl;
+    file << dob.getYear() << endl;
+  }
+  file.close();
 }

@@ -20,7 +20,8 @@ public:
   void addStudent();
   void updateStudent();
   void deleteStudent();
-  void readStudents();
-  void saveStudents();
+  void searchStudent();
+  void loadFile();
+  void saveFile();
 };
 #endif
