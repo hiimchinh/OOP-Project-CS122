@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
   StudentManagement qlsv;
+  qlsv.loadFile();
   cout << "Chương trình quản lý sinh viên\n";
   int option;
   do
@@ -18,7 +19,6 @@ int main()
     switch (option)
     {
     case 1:
-      qlsv.loadFile();
       qlsv.printStudents();
       break;
     case 2:
@@ -26,8 +26,10 @@ int main()
       qlsv.saveFile();
       break;
     case 3:
+      qlsv.updateStudent();
       break;
     case 4:
+      qlsv.deleteStudent();
       break;
     case 5:
       break;

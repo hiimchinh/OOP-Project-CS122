@@ -6,7 +6,8 @@ using namespace std;
 
 void StudentManagement::printMenu()
 {
-  cout << endl << "1. Hiển thị danh sách sinh viên\n";
+  cout << endl
+       << "1. Hiển thị danh sách sinh viên\n";
   cout << "2. Thêm sinh viên\n";
   cout << "3. Sửa sinh viên\n";
   cout << "4. Xóa sinh viên\n";
@@ -21,6 +22,7 @@ void StudentManagement::printStudents()
     students[i].print();
     cout << "------" << endl;
   }
+  cout << "Tổng số sinh viên hiện tại: " << n << endl;
 }
 
 void StudentManagement::addStudent()
@@ -60,7 +62,6 @@ void StudentManagement::loadFile()
     Date dob(date, month, year);
     students[i] = Student(id, fullName, homeTown, dob);
   }
-  
 }
 
 void StudentManagement::saveFile()
@@ -79,4 +80,41 @@ void StudentManagement::saveFile()
     file << dob.getYear() << endl;
   }
   file.close();
+}
+
+void StudentManagement::updateStudent()
+{
+  cout << "Mời nhập mã sinh viên bạn muốn cập nhật: ";
+  string id, fullName, homeTown;
+  int pos = -1;
+  cin >> id;
+  cin.ignore();
+  for (int i = 0; i < n; i++)
+  {
+    if (id == students[i].getId())
+    {
+      pos = i;
+      break;
+    }
+  }
+  if (pos != -1)
+  {
+    int date, month, year;
+    cout << "Mời bạn nhập họ tên mới: ";
+    getline(cin, fullName);
+    cout << "Mời bạn nhập quê quán mới: ";
+    getline(cin, homeTown);
+    cout << "Mời bạn nhập ngày tháng năm sinh mới: ";
+    cin >> date >> month >> year;
+    Date dob(date, month, year);
+    students[pos] = Student(id, fullName, homeTown, dob);
+    cout << "Cập nhật thông tin sinh viên thành công.";
+  } else
+  {
+    cout << "Không tìm thấy sinh viên có mã sinh viên " << id;
+  }
+}
+
+void StudentManagement::deleteStudent()
+{
 }
