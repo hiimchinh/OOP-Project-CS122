@@ -6,7 +6,7 @@ using namespace std;
 
 void StudentManagement::printMenu()
 {
-  cout << "1. Hiển thị danh sách sinh viên\n";
+  cout << endl << "1. Hiển thị danh sách sinh viên\n";
   cout << "2. Thêm sinh viên\n";
   cout << "3. Sửa sinh viên\n";
   cout << "4. Xóa sinh viên\n";
@@ -19,6 +19,7 @@ void StudentManagement::printStudents()
   for (int i = 0; i < n; i++)
   {
     students[i].print();
+    cout << "------" << endl;
   }
 }
 
@@ -45,7 +46,21 @@ void StudentManagement::addStudent()
 
 void StudentManagement::loadFile()
 {
-
+  fstream file("data.txt", ios::in);
+  file >> n;
+  for (int i = 0; i < n; i++)
+  {
+    string id, fullName, homeTown;
+    int date, month, year;
+    file >> id;
+    file.ignore();
+    getline(file, fullName);
+    getline(file, homeTown);
+    file >> date >> month >> year;
+    Date dob(date, month, year);
+    students[i] = Student(id, fullName, homeTown, dob);
+  }
+  
 }
 
 void StudentManagement::saveFile()

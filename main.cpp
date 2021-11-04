@@ -14,9 +14,11 @@ int main()
     qlsv.printMenu();
     cout << "Mời chọn chức năng: ";
     cin >> option;
+    cout << "------" << endl;
     switch (option)
     {
     case 1:
+      qlsv.loadFile();
       qlsv.printStudents();
       break;
     case 2:
