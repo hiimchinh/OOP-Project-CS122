@@ -15,6 +15,7 @@ int main()
     qlsv.printMenu();
     cout << "Mời chọn chức năng: ";
     cin >> option;
+    cin.ignore();
     cout << "------" << endl;
     switch (option)
     {
@@ -34,6 +35,7 @@ int main()
       qlsv.saveFile();
       break;
     case 5:
+      qlsv.searchStudent();
       break;
     case 6:
       break;

@@ -143,3 +143,23 @@ void StudentManagement::deleteStudent()
   }
   
 }
+
+void StudentManagement::searchStudent()
+{
+  cout << "Mời nhập từ khóa: ";
+  string query;
+  getline(cin, query);
+  int matchedIndex[n];
+  int numFound = 0;
+  for (int i = 0; i < n; i++)
+  {
+    bool matched = students[i].checkMatch(query);
+    if (matched)
+    {
+      numFound++;
+      students[i].print();
+      cout << "-----\n";
+    }
+  }
+  cout << "Số sinh viên tìm thấy là: " << numFound << endl;
+}

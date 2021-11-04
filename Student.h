@@ -23,6 +23,7 @@ public:
   string getFullName() { return fullName; }
   string getHomeTown() { return homeTown; }
   Date getDob() { return dateOfBirth; }
+  bool checkMatch(string query);
 };
 
 #endif

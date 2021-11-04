@@ -18,3 +18,28 @@ void Student::print()
   cout << "Ngày sinh: ";
   dateOfBirth.print();
 }
+
+bool Student::checkMatch(string query)
+{
+  size_t found = id.find(query);
+  if (found != string::npos)
+  {
+    return true;
+  }
+  found = fullName.find(query);
+  if (found != string::npos)
+  {
+    return true;
+  }
+  found = homeTown.find(query);
+  if (found != string::npos)
+  {
+    return true;
+  }
+  found = dateOfBirth.toString().find(query);
+  if (found != string::npos)
+  {
+    return true;
+  }
+  return false;
+}

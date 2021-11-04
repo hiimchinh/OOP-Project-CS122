@@ -27,6 +27,14 @@ public:
   int getDate() { return day; }
   int getMonth() { return month; }
   int getYear() { return year; }
+  string toString()
+  {
+    string date = "";
+    date += to_string(day) + '/';
+    date += to_string(month) + '/';
+    date += to_string(year) + '/';
+    return date;
+  }
 };
 
 #endif
